@@ -15,7 +15,7 @@ import android.widget.Button;
  */
 public class OneFragment extends Fragment {
     Button btnNext;
-    MainActivity activity;
+    MainActivity activity = null;
 
     public OneFragment() {
         // Required empty public constructor
@@ -43,7 +43,8 @@ public class OneFragment extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.next();
+                if(activity!=null)
+                    activity.next();
             }
         });
 

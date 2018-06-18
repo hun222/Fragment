@@ -4,10 +4,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TwoFragment.backInterface{
     OneFragment one;
     TwoFragment two;
+    String data = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-    public void back(){
+    @Override
+    public void back(String data) {
+        this.data = data;
+        Log.d("dataTag", data);
         super.onBackPressed();
     }
 }
