@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="one_fragment">One Fragement</string>
+    <string name="two_fragment">two Fragement</string>
+    <string name="activity">Activity</string>
+
+    <string name="btnNext">NEXT</string>
+    <string name="btnBack">BACK</string>
+</resources>
